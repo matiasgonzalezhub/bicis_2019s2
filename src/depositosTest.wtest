@@ -1,0 +1,355 @@
+ import bicis.*
+ import accesorios.*
+ import depositos.*
+ 
+test "test_bicis_rapidas" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(2, depo.bicisRapidas().size())
+
+}
+
+
+
+test "test_bicis_marca" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(2, depo.marca().size())
+
+}
+
+
+test "test_bicis_nocturno" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(false, depo.esNocturno())
+
+}
+
+
+
+test "test_bicis_puedeLlevarCarga_10" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(true, depo.puedeLlevarCarga(10))
+
+}
+
+test "test_bicis_puedeLlevarCarga_50" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(false, depo.puedeLlevarCarga(50))
+
+}
+
+
+
+test "test_bicis_mas_rapida" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals("Olmo", depo.marcaBiciMasRapida())
+
+}
+
+
+
+test "test_bicis_cargaDeBicisLargas" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+
+
+	assert.equals(0, depo.cargaDeBicisLargas())
+
+}
+
+
+test "test_bicis_sin_accesorio" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+  	
+  	
+var bici4= new Bicicleta(rodado = 20, largo = 90, marca ="acme")
+
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+depo.agregarBici(bici4)
+
+
+
+	assert.equals(1, depo.cantidadSinAccesorios())
+
+}
+
