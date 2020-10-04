@@ -30,3 +30,10 @@ object morralDeBici {
 	method carga() {return self.getLargo()/3}
 	method esLuminoso(){ return self.getOjoDeGato()}
 }
+
+
+/*
+ * En mi caso los accesorios los resolvi con objetos y no una clase para generarlos. Yo lo cambiaria a una clase base y herencia. 
+ * instanciar objetos que por clase base deban resolver los metodos en comun a todos y si alguno necesita resolver algun metodo mas sea
+ * su responsabilidad
+ */

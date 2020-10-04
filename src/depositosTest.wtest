@@ -353,3 +353,100 @@ depo.agregarBici(bici4)
 
 }
 
+
+
+test "test_bicis_companieras" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+  	
+  	
+var bici4= new Bicicleta(rodado = 20, largo = 90, marca ="acme")
+var bici5 =  new Bicicleta(rodado = 20, largo = 95, marca ="acme")
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+depo.agregarBici(bici4)
+
+
+
+	assert.equals([bici4], depo.bicisCompanieras(bici5))
+
+}
+
+
+
+test "test_bicis-tiene_companieras" {
+	
+	var depo  = new Deposito()
+	
+	var bici1 = new Bicicleta(rodado = 28, largo = 150, marca ="Olmo")
+  
+  	bici1.agregarAccesorio(farolito)
+  	
+  	var bici2 = new Bicicleta(rodado = 26, largo = 110, marca ="Legnano")
+  
+  	bici2.agregarAccesorio(farolito)
+  	
+  	var c = canasto
+  	c.setVolumen(8)
+  	
+  	var m = morralDeBici
+  	m.setLargo(21)
+  	m.setOjoDeGato(true)
+  	
+  	bici2.agregarAccesorio(c)
+  	bici2.agregarAccesorio(m)
+  	
+  	
+  	var bici3 = new Bicicleta(rodado = 20, largo = 90, marca ="Legnano")
+  
+   	var m3 = morralDeBici
+  	m3.setLargo(6)
+  	m3.setOjoDeGato(false)
+  	
+ 
+  	bici3.agregarAccesorio(m3)
+  	
+  	
+var bici4= new Bicicleta(rodado = 20, largo = 90, marca ="acme")
+var bici5 =  new Bicicleta(rodado = 20, largo = 95, marca ="acme")
+
+depo.agregarBici(bici1)
+depo.agregarBici(bici2)
+depo.agregarBici(bici3)
+depo.agregarBici(bici4)
+
+
+
+	assert.equals(true, depo.tieneBicisCompanieras(bici5))
+
+}

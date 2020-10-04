@@ -37,5 +37,21 @@ class Deposito {
  	return bicicletas.count({ x => !x.tieneAccesorio()})
  	
  }
+ 
+ method bicisCompanieras(bici){
+ 	return bicicletas.filter({ x => x.getMarca() == bici.getMarca() && x.getLargo().between(bici.getLargo()*0.10 - bici.getLargo() ,bici.getLargo()*0.10 + bici.getLargo()) })
+ }
+ 
+  method tieneBicisCompanieras(bici){
+ 	return bicicletas.any({ x => x.getMarca() == bici.getMarca() && x.getLargo().between(bici.getLargo()*0.10 - bici.getLargo() ,bici.getLargo()*0.10 + bici.getLargo()) })
+ }
+ 
+ method parejaDeCompanieras(){
+ 	return [] //todo..
+ }
+ 
+ method seHizoLaLuz(){
+ 	return true // todo..
+ }
 }
   
